@@ -20,7 +20,7 @@ library(dplyr)
 ### 1. Reading the data
 
 ```{r}
-unzip("repdata_data_activity.zip")
+unzip("activity.zip")
 activity_data_full<-read.csv("activity.csv", stringsAsFactors = FALSE, header=TRUE)
 activity_data<-activity_data_full[complete.cases(activity_data_full),]
 activity_data$date<-as.Date(activity_data$date)
